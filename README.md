@@ -11,14 +11,5 @@ Clone the project, use the next command:
 git clone https://github.com/shpp-abelokon/day25-es6.git
 ```
 
-#### Install dependencies
+#### Run index.html
 
-First, install nodejs if you had not already done.
-```bash
-https://nodejs.org/en/
-```
-
-To install necessary packages open the root project folder in terminal, and use the next command:
-```bash
-npm i
-```
