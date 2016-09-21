@@ -1,4 +1,4 @@
-'user strict';
+'use strict';
 
 let movielist = document.getElementById('movies');
 
