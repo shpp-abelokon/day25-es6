@@ -33,3 +33,13 @@ getData(`http://www.omdbapi.com/?s=${search}`)  .then(movies =>
     movies.forEach(movie =>
       addMovieList(movie)))
   .catch(error => console.error(error));
+
+$('.btn').click(function(event) {
+$('#movies').html('');
+  let search = $('.form-control').val();
+  getData(`http://www.omdbapi.com/?s=${search}`)  .then(movies =>
+      movies.forEach(movie =>
+        addMovieList(movie)))
+    .catch(error => console.error(error));
+
+});
