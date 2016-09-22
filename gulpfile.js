@@ -3,9 +3,13 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var rename = require('gulp-rename');
 var babel = require('gulp-babel');
+var del = require ('del');
 
+gulp.task('clean', function(){
+  return del.sync('dist/js/');
+});
 
-gulp.task('js', function(){
+gulp.task('js',['clean'],function(){
   return gulp.src("js/**/*.js")
         .pipe(babel())
         .pipe(rename({
@@ -29,7 +33,7 @@ gulp.task('browser-sync',function(){
   });
 });
 
-gulp.task('watch', ['browser-sync','sass','js'], function(){
+gulp.task('watch', ['browser-sync', 'sass','js'], function(){
   gulp.watch('sass/**/*.sass', ['sass']);
   gulp.watch('js/**/*.js',['js']);
 
